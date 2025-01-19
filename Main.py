@@ -1,7 +1,8 @@
 import requests
 
-valcode = input("Введіть валюту:")
-rate = input("Введіть дату:")
+
+valcode = input("Введіть валюту: ")
+rate = input("Введіть дату: ")
 print("-------------")
 response = requests.get(
     f"https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode={valcode}&date={rate}&json")

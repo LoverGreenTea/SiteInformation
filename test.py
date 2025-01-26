@@ -9,6 +9,7 @@ response = requests.get(
 data = response.json()
 
 print(data[GameCode]['data']['type'])
-print(data[GameCode]['data']['type'])
+print(data[GameCode]['data']['name'])
 print(data[GameCode]['data']['is_free'])
+print(data[GameCode]['data']['price_overview']['final_formatted'])
 print("-------------")

@@ -1,29 +1,15 @@
 import requests
-import json
-from bs4 import BeautifulSoup
 
-# URL для пошуку гри
-url = "https://store.steampowered.com/search/suggest?term=Half-Life&f=games&cc=UA&l=ukrainian"
+GameCode = input("Введіть код ігри: ")
 
-# Виконання HTTP-запиту
-response = requests.get(url)
+print("-------------")
+response = requests.get(
+    f"https://store.steampowered.com/api/appdetails?appids={GameCode}")
 
-# Перевірка статусу відповіді
-if response.status_code == 200:
-    # Обробка HTML-відповіді
-    soup = BeautifulSoup(response.text, "html.parser")
-    games = []
+data = response.json()
 
-    for match in soup.find_all("a", class_="match"):
-        game = {
-            "name": match.find("div", class_="match_name").text,
-            "appid": match["data-ds-appid"],
-            "url": match["href"],
-            "image": match.find("img")["src"],
-            "price": match.find("div", class_="match_price").text.strip()
-        }
-        games.append(game)
-
-    print(json.dumps(games, indent=4, ensure_ascii=False))
-else:
-    print(f"Помилка: Код відповіді {response.status_code}")
+print(data[GameCode]['data']['type'])
+print(data[GameCode]['data']['name'])
+print(data[GameCode]['data']['is_free'])
+print(data[GameCode]['data']['price_overview']['final_formatted'])
+print("-------------")

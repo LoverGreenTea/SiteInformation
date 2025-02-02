@@ -16,6 +16,7 @@ resultat.setPlaceholderText("результат")
 convert = QPushButton("")
 main_line = QVBoxLayout()
 
+
 main_line.addWidget(valcode_)
 main_line.addWidget(year)
 main_line.addWidget(howm_much)

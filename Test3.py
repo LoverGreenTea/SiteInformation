@@ -27,8 +27,3 @@ def search_steam_game(game_name):
     else:
         return json.dumps({"error": f"Помилка: Код відповіді {response.status_code}"}, indent=4, ensure_ascii=False)
 
-
-# Приклад використання
-if __name__ == "__main__":
-    game_name = input("Введіть назву гри: ")
-    print(search_steam_game(game_name))

@@ -3,6 +3,8 @@ import requests
 import json
 from bs4 import BeautifulSoup
 
+import Test3
+
 app = QApplication([])
 window = QWidget()
 main_line = QVBoxLayout()
@@ -29,7 +31,7 @@ main_line.addWidget(convert)
 
 def get_game():
     gamename = GameName.text()
-    info =search_steam_game(gamename)
+    info =Test3.search_steam_game(gamename)
     print(info)
 
 

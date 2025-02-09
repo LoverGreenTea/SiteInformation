@@ -33,9 +33,29 @@ def get_game():
     gamename = GameName.text()
     info =Test3.search_steam_game(gamename)
     print(info)
+    print(info['url'])
+    GameCode_.setText(info['appid'])
+    GameCost.setText(info['price'])
+    GameLink.setText(info['url'])
 
-
+window.resize(300, 300)
 convert.clicked.connect(get_game)
 window.setLayout(main_line)
+app.setStyleSheet("""
+        QWidget {
+            background: #3C2A21;
+        }
+        
+        QlineEdit
+        {
+            background: D5CEA3;
+            border-color: #1A3636;
+        }
+        
+        QPushButton
+        {
+            background: #D5CEA3;
+        }
+    """)
 window.show()
 app.exec()

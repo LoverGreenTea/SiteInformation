@@ -11,7 +11,7 @@ main_line = QVBoxLayout()
 #код
 GameCode_ = QLineEdit()
 GameCode_.setPlaceholderText("код ігри")
-convert = QPushButton("нажати")
+convert = QPushButton("Нажати")
 GameName = QLineEdit()
 GameName.setPlaceholderText("Введіть назву ігри")
 GameCost = QLineEdit()
@@ -45,9 +45,11 @@ app.setStyleSheet("""
             background: #F7F7F7;
         }
         
-        QlineEdit {
+        QlineEdit 
+        {
             background: yellow;
             border-radius: 5px;
+            font-size: 20px;
         }
         
         QPushButton
@@ -56,6 +58,7 @@ app.setStyleSheet("""
             padding: 6px;
             border-style: groove;
             border-radius: 5px;
+            font-size: 20px;
         }
     """)
 window.show()

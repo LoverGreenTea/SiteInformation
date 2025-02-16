@@ -2,6 +2,7 @@ from PyQt5.QtWidgets import *
 import requests
 import json
 from bs4 import BeautifulSoup
+from PyQt5.QtGui import QImage, QPixmap
 
 import Test3
 

@@ -28,6 +28,7 @@ def search_steam_game(game_name):
                 "image": match.find("img")["src"],
                 "price": match.find("div", class_="match_price").text.strip() if match.find("div",
                                                                                             class_="match_price") else "Ціна не вказана",
+
             }
             return game
         else:

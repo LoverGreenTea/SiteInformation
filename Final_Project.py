@@ -4,6 +4,7 @@ import json
 from PIL import Image
 from bs4 import BeautifulSoup
 from PyQt5.QtGui import QImage, QPixmap
+from urllib.request import urlopen
 
 import Test3
 

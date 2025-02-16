@@ -14,7 +14,7 @@ GameCost = QLineEdit()
 GameCost.setPlaceholderText("ціна")
 
 GameYear = QLineEdit()
-GameYear.setPlaceholderText("рік")
+GameYear.setPlaceholderText("Картинка")
 GameLink = QLineEdit()
 GameLink.setPlaceholderText("link")
 

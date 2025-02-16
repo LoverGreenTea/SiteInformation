@@ -45,14 +45,17 @@ app.setStyleSheet("""
             background: #F7F7F7;
         }
         
-        QlineEdit
-        {
-            background: #51557E;
+        QlineEdit {
+            background: yellow;
+            border-radius: 5px;
         }
         
         QPushButton
         {
             background-color: #FFB22C;
+            padding: 6px;
+            border-style: groove;
+            border-radius: 5px;
         }
     """)
 window.show()

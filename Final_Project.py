@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import *
 import requests
 import json
+from PIL import Image
 from bs4 import BeautifulSoup
 from PyQt5.QtGui import QImage, QPixmap
 
@@ -17,15 +18,15 @@ GameName = QLineEdit()
 GameName.setPlaceholderText("Введіть назву ігри")
 GameCost = QLineEdit()
 GameCost.setPlaceholderText("ціна")
-GameYear = QLineEdit()
-GameYear.setPlaceholderText("Картинка")
+GameImage = QLineEdit()
+GameImage.setPlaceholderText("Картинка")
 GameLink = QLineEdit()
 GameLink.setPlaceholderText("link")
 
 main_line.addWidget(GameName)
 main_line.addWidget(GameCode_)
 main_line.addWidget(GameCost)
-main_line.addWidget(GameYear)
+main_line.addWidget(GameImage)
 main_line.addWidget(GameLink)
 main_line.addWidget(convert)
 
@@ -36,7 +37,7 @@ def get_game():
     GameCode_.setText("код: "+ info['appid'])
     GameCost.setText("ціна: "+ info['price'])
     GameLink.setText(info['url'])
-    GameYear.setText(info['image'])
+    GameImage.setText(info['image'])
 
 window.resize(300, 300)
 convert.clicked.connect(get_game)
